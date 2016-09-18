@@ -17,6 +17,7 @@
   },
   "author": "Giff Song <giff.song@gmail.com>",
   "files": [
+    "src",
     "lib"
   ],
   "license": "MIT",
