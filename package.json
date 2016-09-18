@@ -1,0 +1,50 @@
+{
+  "name": "texture-atlas",
+  "version": "0.1.0",
+  "description": "atlaspack rewritten in TypeScript",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run install:typings && npm run build",
+    "install:typings": "typings install",
+    "lint": "tslint src/*.ts example/*.ts",
+    "test": "npm run lint",
+    "clean": "rimraf lib",
+    "build": "npm run clean && tsc",
+    "build:watch": "npm run build -- --watch",
+    "build:example": "browserify example/example.ts -p tsify -o bundle.js",
+    "start": "budo example/example.ts:bundle.js -- -p tsify"
+  },
+  "author": "Giff Song <giff.song@gmail.com>",
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "voxel",
+    "texture",
+    "atlas",
+    "atlaspack",
+    "geometry",
+    "spritemap"
+  ],
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pawsong/texture-atlas"
+  },
+  "bugs": {
+    "url": "https://github.com/pawsong/texture-atlas/issues"
+  },
+  "devDependencies": {
+    "bluebird": "^3.4.6",
+    "browserify": "^13.1.0",
+    "budo": "^9.2.0",
+    "painterly-textures": "0.0.3",
+    "rimraf": "^2.5.4",
+    "tsify": "^1.0.7",
+    "tslint": "^3.15.1",
+    "typescript": "^1.8.10",
+    "typings": "^1.3.3"
+  }
+}
