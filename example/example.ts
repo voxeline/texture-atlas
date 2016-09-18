@@ -8,7 +8,7 @@ document.body.appendChild(canvas);
 canvas.width = 128;
 canvas.height = 128;
 
-const tilepad = true;
+const tilepad = false;
 
 // create an atlas with our canvas
 let atlas = new Atlas(canvas, { tilepad });
