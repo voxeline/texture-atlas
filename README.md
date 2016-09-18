@@ -37,22 +37,22 @@ Create an instance using `new` operator.
 ### `Atlas#pack(id, drawable)`
 
 - `id` *string* texture id. used by `Atlas#uv` and `Atlas#uv2`.
-- `drawable *HTMLImageElement | HTMLCanvasElement* texture image.
+- `drawable` *HTMLImageElement | HTMLCanvasElement* texture image.
 - `Altas#pack` returns `null` on failure.
 
 ### `Atlas#expand(id, drawable)`
 
 - `id` *string* texture id. used by `Atlas#uv` and `Atlas#uv2`.
-- `drawable *HTMLImageElement | HTMLCanvasElement* texture image.
+- `drawable` *HTMLImageElement | HTMLCanvasElement* texture image.
 - `Altas#expand` does not return a new Atlas instance. It mutates the calling instance.
 
-### `Atlas#uv`
+### `Atlas#uv()`
 
 - `Atlas#uv` does not receive any parameter. It uses `altas.canvas` width and height.
 
-### `Atlas#uv2`
+### `Atlas#uv2()`
 
-- `Atlas#uv2` returns uv in `Float32Array` format. (shape = [4,2], stride = [2,1])
+- `Atlas#uv2` returns uv in `Float32Array` format. ( shape = [4, 2], stride = [2, 1] )
 
 ```javascript
 const uv1 = atlas.uv()['my_awesome_uv'];
