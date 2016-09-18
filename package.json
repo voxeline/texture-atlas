@@ -1,6 +1,6 @@
 {
   "name": "texture-atlas",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "atlaspack rewritten in TypeScript",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
