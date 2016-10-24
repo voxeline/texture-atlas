@@ -1,5 +1,7 @@
 # texture-atlas
 
+[![NPM Version][npm-image]][npm-url]
+
 [atlaspack](https://github.com/shama/atlaspack) rewritten in TypeScript with some API changes.
 
 ## API changes
@@ -116,3 +118,6 @@ Kyle Robinson Young (@shama) for code from [atlaspack](https://github.com/shama/
 ## License
 
 MIT
+
+[npm-image]: https://img.shields.io/npm/v/texture-atlas.svg
+[npm-url]: https://npmjs.org/package/texture-atlas
