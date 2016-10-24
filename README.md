@@ -103,6 +103,10 @@ $ npm run build
 $ npm run build:watch
 ```
 
+## Credits
+
+Kyle Robinson Young (@shama) for code from [atlaspack](https://github.com/shama/atlaspack)
+
 ## License
 
 MIT
