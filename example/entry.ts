@@ -1,6 +1,8 @@
+declare const require: any;
+
 import Promise = require('bluebird');
-import { Atlas } from '../src/index.ts';
-import { debug } from '../src/utils';
+import { Atlas } from '..';
+import { debug } from '../lib/utils';
 
 // create a canvas
 const canvas = document.createElement('canvas');
@@ -38,16 +40,25 @@ let promise = <Promise<any>> Promise.resolve();
 
 // add images to our atlas
 [
-  'dirt', 'grass', 'grass_dirt',
-  'obsidian', 'plank', 'whitewool',
-  'crate',
-  'bedrock', 'bluewool', 'cobblestone',
-  'brick', 'diamond', 'glowstone',
-  'netherrack', 'redwool',
-].forEach(name => {
+  require(`file!painterly-textures/textures/dirt.png`),
+  require(`file!painterly-textures/textures/grass.png`),
+  require(`file!painterly-textures/textures/grass_dirt.png`),
+  require(`file!painterly-textures/textures/obsidian.png`),
+  require(`file!painterly-textures/textures/plank.png`),
+  require(`file!painterly-textures/textures/whitewool.png`),
+  require(`file!painterly-textures/textures/crate.png`),
+  require(`file!painterly-textures/textures/bedrock.png`),
+  require(`file!painterly-textures/textures/bluewool.png`),
+  require(`file!painterly-textures/textures/cobblestone.png`),
+  require(`file!painterly-textures/textures/brick.png`),
+  require(`file!painterly-textures/textures/diamond.png`),
+  require(`file!painterly-textures/textures/glowstone.png`),
+  require(`file!painterly-textures/textures/netherrack.png`),
+  require(`file!painterly-textures/textures/redwool.png`),
+].forEach(url => {
   promise = promise.then(() => Promise.all([
     wait(300),
-    fetchImage(`node_modules/painterly-textures/textures/${name}.png`).then(atlasPack),
+    fetchImage(url).then(atlasPack),
   ]));
 });
 

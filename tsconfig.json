@@ -7,9 +7,7 @@
     "sourceMap": true,
     "noImplicitAny": true
   },
-  "files": [
-    "src/index.ts",
-    "src/utils.ts",
-    "typings/index.d.ts"
+  "include": [
+    "src/**.*"
   ]
 }

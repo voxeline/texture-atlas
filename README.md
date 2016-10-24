@@ -90,17 +90,23 @@ $ npm install texture-atlas
 
 ## Development
 
+### Build
+
+```bash
+$ npm run build
+$ npm run build:watch
+```
+
 ### Test
 
 ```bash
 $ npm test
 ```
 
-### Build
+### Run example
 
 ```bash
-$ npm run build
-$ npm run build:watch
+$ npm run start:example
 ```
 
 ## Credits
